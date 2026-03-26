@@ -6,6 +6,7 @@ from prometheus_flask_exporter import PrometheusMetrics
 
 
 app = Flask(__name__)
+app.json.ensure_ascii = False
 PrometheusMetrics(app)
 
 
